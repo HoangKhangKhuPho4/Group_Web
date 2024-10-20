@@ -1,0 +1,830 @@
+/**
+* Template Name: Bethany - v4.6.0
+* Template URL: https://bootstrapmade.com/bethany-free-onepage-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #009970;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00cc95;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Raleway", sans-serif;
+}
+
+/* Nội dung chính */
+.content-wrap {
+    flex: 1;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+
+.back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    background: #009970;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.back-to-top i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.back-to-top:hover {
+    background: #00c28e;
+    color: #fff;
+}
+
+.back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.custom-card {
+    transition: box-shadow .3s;
+    border-radius:10px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.custom-card:hover {
+    box-shadow: 0 8px 16px rgba(33,33,33,.2); 
+}
+
+/*--------------------------------------------------------------
+# Disable AOS delay on mobile
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 997;
+    transition: all 0.5s;
+    background: #fff;
+    height: 80px; /* Cố định chiều cao của header */
+    display: flex;
+    align-items: center;
+}
+
+#header .header-container {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+}
+
+#header.header-scrolled {
+    background: #fff;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    top: 0;
+}
+
+#header .logo {
+    overflow: hidden;
+    padding: 16px 30px 12px 30px;
+    background: #009970;
+}
+
+#header .logo h1 {
+    font-size: 26px;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#header .logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 40px;
+}
+
+@media (max-width: 992px) {
+    #header {
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+        top: 0;
+        background: #009970;
+    }
+    #header.header-scrolled,
+    #header .header-container {
+        background: #009970;
+    }
+    #header .logo {
+        padding-left: 0;
+    }
+    #header .logo h1 {
+        font-size: 24px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+/**
+* Desktop Navigation 
+*/
+
+.navbar {
+    padding: 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    color: #36343a;
+    transition: 0.3s;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+    color: #009970;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+    background: #009970;
+    padding: 10px 25px;
+    margin-left: 30px;
+    margin-right: 15px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+    color: #fff;
+    background: #00b383;
+}
+
+.navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+    min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+    padding: 10px 20px;
+    text-transform: none;
+    font-weight: 500;
+}
+
+.navbar .dropdown ul a i {
+    font-size: 12px;
+}
+
+.navbar .dropdown ul a:hover,
+.navbar .dropdown ul .active:hover,
+.navbar .dropdown ul li:hover>a {
+    color: #009970;
+}
+
+.navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+}
+
+@media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+        left: -90%;
+    }
+    .navbar .dropdown .dropdown:hover>ul {
+        left: -100%;
+    }
+}
+
+/**
+* Mobile Navigation 
+*/
+
+.mobile-nav-toggle {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+    .navbar ul {
+        display: none;
+    }
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(29, 28, 31, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #36343a;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+    color: #009970;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+    margin: 15px;
+}
+
+.navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown ul li {
+    min-width: 200px;
+}
+
+.navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+    color: #009970;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-background.jpg") center center;
+    background-size: cover;
+    position: relative;
+    padding-top: 80px; /* Thêm khoảng cách để tránh bị navbar che */
+}
+
+
+
+#hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+
+#hero h2 {
+    color: #eee;
+    margin-bottom: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#hero .btn-get-started {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+#hero .btn-get-started:hover {
+    background: #009970;
+    border: 2px solid #009970;
+}
+
+@media (min-width: 1024px) {
+    #hero {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        height: 100vh;
+    }
+    #hero .container {
+        padding-top: 60px;
+    }
+    #hero h1 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background-color: #f6f6f7;
+}
+
+.section-title {
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #009970;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Our Team Storytelling Section
+--------------------------------------------------------------*/
+
+.our-team-story {
+    background: #f7f7f7;
+    padding: 60px 0;
+}
+
+.our-team-story .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.our-team-story .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.our-team-story .section-title p {
+    font-size: 16px;
+    color: #777;
+}
+
+.story-container .row {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.story-container .col-lg-4,
+.story-container .col-md-6 {
+    display: flex;
+    align-items: stretch;
+}
+
+.story-item {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .story-item:hover {
+    transform: translateY(-10px);
+  }
+
+  .story-item .icon-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    align-items: center; /* Căn giữa theo chiều ngang */
+    padding: 20px;
+  }
+
+
+  .story-item::before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* Tạo hình vuông */
+  }
+
+  .story-item .icon {
+    margin-bottom: 20px;
+    font-size: 48px;
+    color: #009970;
+  }
+
+  .story-item .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+
+  .story-item .description {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+  }
+
+
+   /* CSS cho Our Team */
+
+   .portfolio-details .portfolio-details-slider {
+    max-height: 400px; /* Giới hạn chiều cao slider */
+    overflow: hidden;
+  }
+
+  .portfolio-details .portfolio-details-slider img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .portfolio-details .portfolio-details-slider {
+      max-height: 250px; /* Giảm chiều cao trên màn hình nhỏ */
+    }
+
+    .portfolio-details .portfolio-details-slider img {
+      max-height: 250px;
+    }
+  }
+
+/*--------------------------------------------------------------
+# Portfolio Details Section
+--------------------------------------------------------------*/
+
+/* Căn giữa tiêu đề "OUR TEAM" */
+.portfolio-details .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.portfolio-details .section-title h2 {
+    font-size: 30px;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    background: #f1f1f1;
+    color: #333;
+    font-size: 14px;
+    padding: 60px 0 0 0;
+}
+
+#footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#footer .footer-column {
+    margin-bottom: 20px;
+}
+
+#footer .footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #009970;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+#footer .footer-column h4::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: #009970;
+    left: 0;
+    bottom: -5px;
+}
+
+#footer .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#footer .footer-column ul li {
+    margin-bottom: 10px;
+}
+
+#footer .footer-column ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 14px;
+}
+
+#footer .footer-column ul li a:hover {
+    color: #009970;
+}
+
+#footer .footer-column p {
+    color: #777;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+#footer .footer-column .contact-info {
+    line-height: 24px;
+}
+
+#footer .footer-column .contact-info i {
+    color: #009970;
+    margin-right: 10px;
+}
+
+#footer .footer-bottom {
+    background: #e1e1e1;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+#footer .footer-bottom .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer .credits {
+    padding-top: 5px;
+    font-size: 13px;
+    color: #444;
+}
+
+#footer .social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* CSS cho các icon trong footer */
+#footer .social-links a {
+    color: #fff;
+    background-color: #009970;
+    margin: 0 8px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#footer .social-links a i {
+    position: relative;
+    z-index: 2;
+}
+
+#footer .social-links a::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 0;
+    top: 50%;
+    left: -10%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+#footer .social-links a:hover {
+    color: #fff;
+    background-color: #00b383;
+    transform: translateY(-5px);
+}
+
+#footer .social-links a:hover::before {
+    height: 250%;
+}
+
+#footer .social-links a:hover i {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #footer .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    #footer .footer-bottom .container {
+        flex-direction: column;
+    }
+}

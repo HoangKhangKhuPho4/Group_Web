@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Phần head -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Group 15</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Custom CSS for arranging member cards and adding effects -->
+    <style>
+        /* Member Cards Container */
+        .member-cards-container {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: stretch;
+            overflow-x: auto;
+            padding: 1em 0;
+        }
+
+        /* Hide scrollbar for WebKit browsers */
+        .member-cards-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .member-cards-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Member Card Styling */
+        .member-card {
+            flex: 0 0 auto;
+            width: 18%;
+            margin: 0 0.5%;
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+            background-color: #f0f0f0;
+        }
+
+        /* Image */
+        .member-card .pic {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .member-card .pic img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .member-card:hover .pic img {
+            transform: scale(1.05);
+        }
+
+        /* Member Info */
+        .member-card .member-info {
+            padding: 1em;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .member-card .member-info h4 {
+            font-size: 1.2em;
+            margin-bottom: 0.3em;
+            color: #333;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .member-card .member-info h4::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #009970;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -5px;
+        }
+
+        .member-card .member-info span {
+            display: block;
+            font-size: 0.95em;
+            color: #777;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+        }
+
+        .member-card .member-info p {
+            font-size: 0.85em;
+            color: #555;
+            margin-bottom: 0.3em;
+        }
+
+        /* Social Icons */
+        .member-card .social {
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .member-card .social a {
+            color: #555;
+            margin: 0 0.3em;
+            font-size: 1.4em;
+            transition: color 0.3s, transform 0.3s;
+            position: relative;
+        }
+
+        .member-card .social a:hover {
+            color: #009970;
+            transform: translateY(-5px) rotate(15deg);
+        }
+
+        /* Tooltip for social icons */
+        .member-card .social a::after {
+            content: attr(title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 8px;
+            border-radius: 4px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        .member-card .social a:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-15px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .member-card {
+                width: 22%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .member-card {
+                width: 28%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .member-card {
+                width: 40%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .member-card {
+                width: 80%;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Main content adjustment */
+        #main {
+            padding-top: 100px; /* Adjust to the navbar's height */
+        }
+
+        /* Ensure About Us section doesn't have conflicting margins */
+        #about {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container">
+            <div class="header-container d-flex align-items-center justify-content-between">
+                <div class="logo">
+                    <h1 class="text-light"><a href="index.html"><span>Group 15</span></a></h1>
+                </div>
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                        <li><a class="nav-link scrollto" href="about.html">About</a></li>
+                        <li><a class="nav-link scrollto" href="groupDiary.html">Group Diary</a></li>
+                        <li><a class="nav-link scrollto" href="technical.html">Technical</a></li>
+                        <li><a class="nav-link scrollto" href="styleguide.html">Style Guide</a></li>
+                        <li><a class="nav-link scrollto" href="results.html">Results</a></li>
+                        <li><a class="nav-link scrollto" href="project.html">Project</a></li>
+                        <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav>
+                <!-- .navbar -->
+
+            </div>
+            <!-- End Header Container -->
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                </div>
+
+                <!-- Member Cards Container -->
+                <div class="member-cards-container" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Member 1 -->
+                    <div class="member-card" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="pic">
+                            <img src="assets/img/team/team-1.jpg" alt="Trần Nhật Mạnh">
+                        </div>
+                        <div class="member-info">
+                            <h4>Dương Quốc Toàn</h4>
+                            <span>Leader</span>
+                            <p>Student code: 21130443</p>
+                            <p>Class: DH21DTC</p>
+                            <p>Quê quán: Hà Nội</p>
+                            <p>Sở thích: Đọc sách, chơi cờ vua</p>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.facebook.com/johnson.billy.528" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://github.com/username1" title="GitHub"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="member-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="pic">
+                            <img src="assets/img/team/team-2.jpg" alt="Lê Ngọc Phương Thảo">
+                        </div>
+                        <div class="member-info">
+                            <h4>Đặng Thị Mỹ Hạnh</h4>
+                            <span>Member</span>
+                            <p>Student code: 20130408</p>
+                            <p>Class: DH20DTA</p>
+                            <p>Quê quán: Đà Nẵng</p>
+                            <p>Sở thích: Du lịch, nấu ăn</p>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.facebook.com/thaoo.phuonqq.948" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://github.com/username2" title="GitHub"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                    <!-- Member 3 -->
+                    <div class="member-card" data-aos="zoom-in" data-aos-delay="250">
+                        <div class="pic">
+                            <img src="assets/img/team/team-3.png" alt="Nguyễn Lê Hoàng Khang">
+                        </div>
+                        <div class="member-info">
+                            <h4>Nguyễn Lê Hoàng Khang</h4>
+                            <span>Member</span>
+                            <p>Student code: 22130116</p>
+                            <p>Class: DH22DTB</p>
+                            <p>Quê quán: Ninh Thuận</p>
+                            <p>Sở thích: Chơi guitar, xem phim</p>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.facebook.com/profile.php?id=100088292157574&locale=vi_VN" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://gtnm.io.vn/" title="GitHub"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                    <!-- Member 4 -->
+                    <div class="member-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="pic">
+                            <img src="assets/img/team/team-4.jpg" alt="Lê Trung Đông">
+                        </div>
+                        <div class="member-info">
+                            <h4>Lê Trung Đông</h4>
+                            <span>Member</span>
+                            <p>Student code: 22130426</p>
+                            <p>Class: DH22DTA</p>
+                            <p>Quê quán: Hải Phòng</p>
+                            <p>Sở thích: Bóng đá, lập trình</p>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.facebook.com/Tui.ten.dong" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://github.com/username4" title="GitHub"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                    <!-- Member 5 -->
+                    <div class="member-card" data-aos="zoom-in" data-aos-delay="350">
+                        <div class="pic">
+                            <img src="assets/img/team/team-5.jpg" alt="Thiều Nhật Hào">
+                        </div>
+                        <div class="member-info">
+                            <h4>Thiều Nhật Hào</h4>
+                            <span>Member</span>
+                            <p>Student code: 22130075</p>
+                            <p>Class: DH22DTC</p>
+                            <p>Quê quán: Cần Thơ</p>
+                            <p>Sở thích: Chơi game, đi du lịch</p>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.facebook.com/profile.php?id=100022691887846" title="Facebook"><i class="ri-facebook-fill"></i></a>
+                            <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://github.com/username5" title="GitHub"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                    <!-- Add more member cards as needed -->
+                </div>
+                <!-- End Member Cards Container -->
+
+            </div>
+        </section>
+        <!-- End About Section -->
+
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>We are a team of passionate individuals dedicated to delivering the best services to our clients. Our mission is to provide innovative solutions and exceptional customer service.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Useful Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Technical Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>
+                    123 ABC Street, XYZ District<br>
+                    City, Country<br>
+                    Phone: +84 123 456 789<br>
+                    Email: info@example.com
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container d-md-flex py-4">
+                <div class="me-md-auto text-center text-md-start">
+                    <div class="copyright">
+                        &copy; Copyright <strong><span>Group 15</span></strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        Designed by <a href="#">Group 15</a>
+                    </div>
+                </div>
+                <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                    <a href="#" class="twitter" title="Twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook" title="Facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram" title="Instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus" title="Skype"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
