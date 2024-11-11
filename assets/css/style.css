@@ -828,3 +828,34 @@ section {
         flex-direction: column;
     }
 }
+
+
+
+/**Project**/
+.bg-green{
+    background: #009970 !important;
+}
+.border-green {
+    border:1px solid #009970 !important;
+}
+
+.project_tab .nav-link.active {
+    color:white !important;
+    background: #009970 !important;
+}
+
+/**Navigation bar vertical**/
+/**cái này để nhấn thì icon mũi tên sẽ quay**/
+.caret {
+    transition: 0.5s;
+}
+/* .caret i{
+    transform: rotate(0deg);
+} */
+
+.caret:not(.collapsed) i{
+    transform: rotate(180deg);
+}
+.caret:is(.collapsed) i{
+    transform: rotate(0deg);
+}
