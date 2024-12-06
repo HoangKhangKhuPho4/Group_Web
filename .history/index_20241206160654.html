@@ -16,16 +16,10 @@
     </script>
     <!-- End Google Tag Manager -->
 
-    <meta
-      name="google-site-verification"
-      content="EO8Nf8U0RywdH3XDIGdBO9ayEUmYV3Sa4KyZ9BoOK-Y"
-    />
+    <meta name="google-site-verification" content="EO8Nf8U0RywdH3XDIGdBO9ayEUmYV3Sa4KyZ9BoOK-Y" />
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta
-      name="google-site-verification"
-      content="NlS1kOlcOLN_zi65x2N4-Xf35p3_Yhxgn-Sx0oEMzRE"
-    />
+    <meta name="google-site-verification" content="NlS1kOlcOLN_zi65x2N4-Xf35p3_Yhxgn-Sx0oEMzRE" />
 
     <title>Group 15</title>
     <meta content="" name="description" />
@@ -43,19 +37,10 @@
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
     <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
@@ -64,16 +49,184 @@
 
     <!-- Custom CSS -->
     <style>
-      .btn-get-started {
-        font-size: 16px; /* Adjust font size as needed */
-        padding: 15px 30px; /* Adjust padding for larger button */
-        border-radius: 10px; /* Slightly rounded corners */
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+      /* Đặt box-sizing toàn cục */
+      * {
+        box-sizing: border-box;
       }
 
-      /* Add some padding for better spacing around the button */
+      /* Định dạng cho container của CTA */
       .cta-container {
-        padding: 20px; /* Example padding */
+        margin-left: auto; /* Đẩy nút về phía bên phải trong flex container */
+        padding: 20px; /* Thêm padding cho khoảng cách */
+      }
+
+      /* Định dạng nút "Go To Project" */
+      .btn-get-started {
+        background-color: #009970; /* Màu xanh lá cây giống logo */
+        color: #fff; /* Chữ trắng */
+        border: 2px solid #fff; /* Viền trắng */
+        padding: 15px 30px; /* Kích thước padding */
+        border-radius: 10px; /* Bo góc nút */
+        font-weight: bold; /* Đậm chữ */
+        text-transform: uppercase; /* Chữ in hoa */
+        display: inline-flex; /* Hiển thị inline-flex để áp dụng padding và margin */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        justify-content: center; /* Căn giữa theo chiều ngang */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+        text-decoration: none; /* Loại bỏ gạch chân */
+        margin-left: 20px; /* Khoảng cách từ các liên kết navigation */
+      }
+
+      .btn-get-started:hover {
+        background-color: #00b383; /* Màu xanh lá cây đậm hơn khi hover */
+        transform: translateY(-2px); /* Hiệu ứng nâng nút lên */
+        text-decoration: none; /* Loại bỏ gạch chân khi hover */
+      }
+
+      /* Định dạng cho đoạn mô tả trong Hero Section */
+      .hero-description {
+        font-size: 18px;
+        color: #ffffff; /* Màu chữ trắng để nổi bật trên nền */
+        max-width: 600px; /* Giới hạn độ rộng để dễ đọc */
+        margin: 20px auto; /* Tạo khoảng cách trên và dưới, căn giữa */
+        line-height: 1.6; /* Độ cao dòng để dễ đọc */
+      }
+
+      /* Định dạng cho các tính năng trong Hero Section */
+      .hero-features {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 40px 0;
+      }
+
+      .feature-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        width: 250px;
+        text-align: center;
+        color: #ffffff;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-item:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      .feature-item i {
+        font-size: 40px;
+        margin-bottom: 15px;
+        color: #00b383; /* Màu xanh lá cây đậm hơn cho icon */
+      }
+
+      .feature-item h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .feature-item p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      /* Thêm khoảng trống dưới các tiêu đề trong Hero Section */
+      #hero h1 {
+        margin-bottom: 20px; /* Tăng hoặc giảm giá trị tùy ý */
+      }
+
+      #hero h2 {
+        margin-bottom: 30px; /* Tăng hoặc giảm giá trị tùy ý */
+      }
+
+      /* Thêm khoảng trống bằng phần tử rỗng */
+      .spacing {
+        height: 40px; /* Tăng hoặc giảm giá trị tùy ý */
+      }
+
+      /* Định dạng cho thanh navigation */
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Phân bố không gian giữa ul và CTA button */
+      }
+
+      .navbar ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar ul li {
+        margin-right: 15px; /* Khoảng cách giữa các mục navigation */
+      }
+
+      .navbar ul li:last-child {
+        margin-right: 0; /* Không cần khoảng cách sau mục cuối cùng */
+      }
+
+      .navbar ul li a {
+        color: #fff; /* Màu chữ các liên kết navigation */
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .navbar ul li a:hover,
+      .navbar ul li a.active {
+        background-color: rgba(255, 255, 255, 0.2); /* Màu nền khi hover và active */
+        color: #fff;
+      }
+
+      /* Responsive Design: Điều chỉnh cho các màn hình nhỏ hơn */
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column; /* Đổi hướng flex trong navbar */
+          align-items: flex-start; /* Căn lề trái */
+        }
+
+        .navbar ul {
+          flex-direction: column; /* Đổi hướng danh sách ul thành cột */
+          width: 100%; /* Độ rộng toàn bộ */
+          display: none; /* Ẩn menu mặc định */
+        }
+
+        .navbar.active ul {
+          display: flex; /* Hiển thị menu khi active */
+        }
+
+        .navbar ul li {
+          width: 100%; /* Đặt độ rộng li toàn bộ */
+          margin-right: 0; /* Loại bỏ margin phải */
+          margin-bottom: 10px; /* Thêm khoảng cách dưới cho các mục trên mobile */
+        }
+
+        .cta-container {
+          width: 100%; /* Độ rộng toàn bộ trên mobile */
+          text-align: center; /* Căn giữa nội dung */
+          margin: 15px 0; /* Khoảng cách trên mobile */
+          padding: 0; /* Loại bỏ padding nếu cần */
+        }
+
+        .btn-get-started {
+          width: 100%; /* Độ rộng toàn bộ trên mobile */
+          padding: 12px 0; /* Điều chỉnh padding */
+          margin-left: 0; /* Loại bỏ margin-left trên mobile */
+        }
+
+        .mobile-nav-toggle {
+          display: block;
+          color: #fff;
+          font-size: 24px;
+          cursor: pointer;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+        }
       }
     </style>
   </head>
@@ -93,64 +246,39 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center">
       <div class="container">
-        <div
-          class="header-container d-flex align-items-center justify-content-between"
-        >
+        <div class="header-container d-flex align-items-center justify-content-between">
           <div class="logo">
-            <h1 class="btn-get-started scrollto">
+            <h1 class="text-light">
               <a href="index.html"><span>Group 15</span></a>
             </h1>
           </div>
 
           <nav id="navbar" class="navbar">
             <ul>
-              <li>
-                <a class="nav-link scrollto active" href="index.html">Home</a>
-              </li>
+              <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
               <li><a class="nav-link scrollto" href="about.html">About</a></li>
-              <li>
-                <a class="nav-link scrollto" href="groupDiary.html"
-                  >Group Diary</a
-                >
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="technical.html">Technical</a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="styleguide.html"
-                  >Style Guide</a
-                >
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="results.html">Results</a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="project.html">Project</a>
-              </li>
-              <li>
-                <a class="nav-link scrollto" href="contact.html">Contact</a>
-              </li>
+              <li><a class="nav-link scrollto" href="groupDiary.html">Group Diary</a></li>
+              <li><a class="nav-link scrollto" href="technical.html">Technical</a></li>
+              <li><a class="nav-link scrollto" href="styleguide.html">Style Guide</a></li>
+              <li><a class="nav-link scrollto" href="results.html">Results</a></li>
+              <li><a class="nav-link scrollto" href="project.html">Project</a></li>
+              <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
             </ul>
+            <!-- Nút toggle mobile menu -->
+            <div class="mobile-nav-toggle">
+              <i class="bi bi-list"></i>
+            </div>
             <!-- Bọc nút trong div với lớp cta-container -->
             <div class="cta-container">
               <a
                 href="https://hoangkhangkhupho4.github.io/Project_Web/"
                 target="_blank"
                 class="btn-get-started scrollto"
-                style="
-                  background-color: #009970;
-                  color: white;
-                  border: none;
-                  padding: 10px 20px;
-                  border-radius: 5px;
-                  font-weight: bold;
-                "
               >
                 Go To Project
               </a>
             </div>
           </nav>
-
           <!-- .navbar -->
         </div>
         <!-- End Header Container -->
@@ -166,14 +294,41 @@
         class="d-flex align-items-center"
         style="padding-top: 80px"
       >
-        <div
-          class="container text-center position-relative"
-          data-aos="fade-in"
-          data-aos-delay="200"
-        >
+        <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
           <h1>Smart Solutions for Restaurant Success</h1>
           <h2>Lecturer: Trần Thị Thanh Nga</h2>
-       
+          <p class="hero-description">
+            Chúng tôi cung cấp các công cụ và chiến lược sáng tạo nhằm nâng cao hiệu suất hoạt động, 
+            tăng cường trải nghiệm khách hàng và thúc đẩy lợi nhuận cho nhà hàng của bạn.
+          </p>
+          <!-- Thêm các tính năng chính -->
+          <div class="hero-features">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-speedometer2"></i>
+              <h3>Tối Ưu Hoá</h3>
+              <p>Nâng cao hiệu suất và quản lý hiệu quả các hoạt động hàng ngày.</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-people"></i>
+              <h3>Tăng Cường Trải Nghiệm Khách Hàng</h3>
+              <p>Cung cấp dịch vụ tuyệt vời để giữ chân và thu hút khách hàng mới.</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-bar-chart"></i>
+              <h3>Phân Tích Thông Minh</h3>
+              <p>Sử dụng dữ liệu để đưa ra các quyết định chiến lược.</p>
+            </div>
+          </div>
+          <!-- Nút CTA -->
+          <div class="cta-container">
+            <a
+              href="https://hoangkhangkhupho4.github.io/Project_Web/"
+              target="_blank"
+              class="btn-get-started scrollto"
+            >
+              Go To Project
+            </a>
+          </div>
         </div>
       </section>
       <!-- End Hero -->
@@ -191,19 +346,14 @@
               <div class="row">
                 <!-- Story Item 1 -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                  <div
-                    class="story-item"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                  >
+                  <div class="story-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="icon-box">
                       <div class="icon">
                         <i class="bi bi-lightbulb"></i>
                       </div>
                       <h4 class="title">Inception of an Idea</h4>
                       <p class="description">
-                        Our journey began with a powerful idea to revolutionize
-                        the culinary experience.
+                        Our journey began with a powerful idea to revolutionize the culinary experience.
                       </p>
                     </div>
                   </div>
@@ -211,19 +361,14 @@
 
                 <!-- Story Item 2 -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                  <div
-                    class="story-item"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
+                  <div class="story-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="icon-box">
                       <div class="icon">
                         <i class="bi bi-people"></i>
                       </div>
                       <h4 class="title">Building the Team</h4>
                       <p class="description">
-                        Assembling a group of passionate and skilled individuals
-                        dedicated to excellence.
+                        Assembling a group of passionate and skilled individuals dedicated to excellence.
                       </p>
                     </div>
                   </div>
@@ -231,19 +376,14 @@
 
                 <!-- Story Item 3 -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                  <div
-                    class="story-item"
-                    data-aos="fade-up"
-                    data-aos-delay="300"
-                  >
+                  <div class="story-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="icon-box">
                       <div class="icon">
                         <i class="bi bi-gear"></i>
                       </div>
                       <h4 class="title">Overcoming Challenges</h4>
                       <p class="description">
-                        Navigating through obstacles with determination and
-                        teamwork.
+                        Navigating through obstacles with determination and teamwork.
                       </p>
                     </div>
                   </div>
@@ -251,11 +391,7 @@
 
                 <!-- Story Item 4 -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                  <div
-                    class="story-item"
-                    data-aos="fade-up"
-                    data-aos-delay="400"
-                  >
+                  <div class="story-item" data-aos="fade-up" data-aos-delay="400">
                     <div class="icon-box">
                       <div class="icon">
                         <i class="bi bi-trophy"></i>
@@ -270,11 +406,7 @@
 
                 <!-- Story Item 5 -->
                 <div class="col-lg-4 col-md-6 mb-4">
-                  <div
-                    class="story-item"
-                    data-aos="fade-up"
-                    data-aos-delay="500"
-                  >
+                  <div class="story-item" data-aos="fade-up" data-aos-delay="500">
                     <div class="icon-box">
                       <div class="icon">
                         <i class="bi bi-globe"></i>
@@ -293,11 +425,7 @@
         <!-- End Our Journey Section -->
 
         <!-- ======= Our Team Section ======= -->
-        <section
-          id="portfolio-details"
-          class="portfolio-details"
-          style="margin-top: 4%"
-        >
+        <section id="portfolio-details" class="portfolio-details" style="margin-top: 4%">
           <div class="container">
             <div class="section-title text-center">
               <h2 style="font-size: 30px; padding: 15px 30px">
@@ -310,24 +438,15 @@
                 <div class="portfolio-details-slider swiper">
                   <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
-                      <img
-                        src="assets/img/portfolio/portfolio-details-1.jpg"
-                        alt=""
-                      />
+                      <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="" />
                     </div>
 
                     <div class="swiper-slide">
-                      <img
-                        src="assets/img/portfolio/portfolio-details-2.jpg"
-                        alt=""
-                      />
+                      <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="" />
                     </div>
 
                     <div class="swiper-slide">
-                      <img
-                        src="assets/img/portfolio/portfolio-details-3.jpg"
-                        alt=""
-                      />
+                      <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="" />
                     </div>
                   </div>
                   <div class="swiper-pagination"></div>
@@ -341,16 +460,13 @@
                     <li><strong>Group Name</strong>: Group 15</li>
                     <li><strong>Number of Members</strong>: 5 members</li>
                     <li>
-                      <strong>Specialization</strong>: Information Technology -
-                      IT
+                      <strong>Specialization</strong>: Information Technology - IT
                     </li>
                     <li>
-                      <strong>University</strong>: Ho Chi Minh City University
-                      of Agriculture and Forestry.
+                      <strong>University</strong>: Ho Chi Minh City University of Agriculture and Forestry.
                     </li>
                     <li>
-                      <strong>Slogan</strong>: "Together we innovate, together
-                      we succeed."
+                      <strong>Slogan</strong>: "Together we innovate, together we succeed."
                     </li>
                   </ul>
                 </div>
@@ -410,27 +526,16 @@
         <div class="container d-md-flex py-4">
           <div class="me-md-auto text-center text-md-start">
             <div class="copyright">
-              &copy; Copyright <strong><span>Group 15</span></strong
-              >. All Rights Reserved
+              &copy; Copyright <strong><span>Group 15</span></strong>. All Rights Reserved
             </div>
             <div class="credits">Designed by <a href="#">Group 15</a></div>
           </div>
           <div class="social-links text-center text-md-right pt-3 pt-md-0">
-            <a href="#" class="twitter" title="Twitter"
-              ><i class="bx bxl-twitter"></i
-            ></a>
-            <a href="#" class="facebook" title="Facebook"
-              ><i class="bx bxl-facebook"></i
-            ></a>
-            <a href="#" class="instagram" title="Instagram"
-              ><i class="bx bxl-instagram"></i
-            ></a>
-            <a href="#" class="google-plus" title="Skype"
-              ><i class="bx bxl-skype"></i
-            ></a>
-            <a href="#" class="linkedin" title="LinkedIn"
-              ><i class="bx bxl-linkedin"></i
-            ></a>
+            <a href="#" class="twitter" title="Twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook" title="Facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram" title="Instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus" title="Skype"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin" title="LinkedIn"><i class="bx bxl-linkedin"></i></a>
           </div>
         </div>
       </div>

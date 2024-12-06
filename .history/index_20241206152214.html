@@ -64,30 +64,75 @@
 
     <!-- Custom CSS -->
     <style>
-      .btn-get-started {
-        font-size: 16px; /* Adjust font size as needed */
-        padding: 15px 30px; /* Adjust padding for larger button */
-        border-radius: 10px; /* Slightly rounded corners */
-        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-      }
+      /* Đặt box-sizing toàn cục */
+* {
+  box-sizing: border-box;
+}
 
-      /* Add some padding for better spacing around the button */
-      .cta-container {
-        padding: 20px; /* Example padding */
-      }
+/* Các quy tắc CSS hiện tại của bạn ... */
+
+/* Định dạng cho container của CTA */
+.cta-container {
+  text-align: center; /* Căn giữa nội dung bên trong */
+  margin: 20px 0; /* Khoảng cách trên và dưới */
+}
+
+/* Định dạng nút "Go To Project" */
+.btn-get-started {
+  background-color: #009970; /* Màu xanh lá cây giống logo */
+  color: #fff; /* Chữ trắng */
+  padding: 12px 30px; /* Kích thước padding */
+  border-radius: 50px; /* Bo tròn góc nút */
+  font-weight: bold; /* Đậm chữ */
+  text-transform: uppercase; /* Chữ in hoa */
+  display: inline-flex; /* Hiển thị inline-flex để áp dụng padding và margin */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+  border: none; /* Loại bỏ border nếu có */
+  text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+/* Hiệu ứng hover cho nút */
+.btn-get-started:hover {
+  background-color: #007a5e; /* Màu xanh đậm hơn khi hover */
+  transform: translateY(-2px); /* Hiệu ứng nâng nút lên */
+  text-decoration: none; /* Loại bỏ gạch chân */
+}
+
+/* CSS cho icon trong nút */
+.btn-get-started i {
+  margin-right: 8px; /* Khoảng cách giữa icon và chữ */
+  font-size: 16px; /* Kích thước icon */
+}
+
+/* Responsive Design cho CTA */
+@media (max-width: 768px) {
+  .cta-container {
+    margin: 15px 0; /* Khoảng cách trên mobile */
+  }
+  
+  .btn-get-started {
+    width: 100%; /* Độ rộng toàn bộ trên mobile */
+    text-align: center; /* Căn giữa chữ */
+    padding: 12px 0; /* Điều chỉnh padding */
+  }
+}
+
     </style>
   </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
+    <noscript
+      ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-KP2R47JB"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- ======= Header ======= -->
@@ -97,7 +142,7 @@
           class="header-container d-flex align-items-center justify-content-between"
         >
           <div class="logo">
-            <h1 class="btn-get-started scrollto">
+            <h1 class="text-light">
               <a href="index.html"><span>Group 15</span></a>
             </h1>
           </div>
@@ -131,24 +176,12 @@
                 <a class="nav-link scrollto" href="contact.html">Contact</a>
               </li>
             </ul>
-            <!-- Bọc nút trong div với lớp cta-container -->
-            <div class="cta-container">
-              <a
-                href="https://hoangkhangkhupho4.github.io/Project_Web/"
-                target="_blank"
-                class="btn-get-started scrollto"
-                style="
-                  background-color: #009970;
-                  color: white;
-                  border: none;
-                  padding: 10px 20px;
-                  border-radius: 5px;
-                  font-weight: bold;
-                "
-              >
-                Go To Project
-              </a>
-            </div>
+            <a
+              href="https://hoangkhangkhupho4.github.io/Project_Web/"
+              target="_blank"
+              class="btn-get-started scrollto"
+              >Go To Project</a
+            >
           </nav>
 
           <!-- .navbar -->
@@ -173,7 +206,12 @@
         >
           <h1>Smart Solutions for Restaurant Success</h1>
           <h2>Lecturer: Trần Thị Thanh Nga</h2>
-       
+          <a
+            href="https://hoangkhangkhupho4.github.io/Project_Web/"
+            target="_blank"
+            class="btn-get-started scrollto"
+            >Go To Project</a
+          >
         </div>
       </section>
       <!-- End Hero -->
@@ -341,7 +379,7 @@
                     <li><strong>Group Name</strong>: Group 15</li>
                     <li><strong>Number of Members</strong>: 5 members</li>
                     <li>
-                      <strong>Specialization</strong>: Information Technology -
+                      <strong>Specialization</strong>: information technology -
                       IT
                     </li>
                     <li>

@@ -33,7 +33,25 @@ a:hover {
     text-decoration: none;
 }
 
-
+.btn-green {
+    background-color: #28a745; /* Màu xanh lá cây tương tự logo */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 15px; /* Khoảng cách từ các liên kết navigation */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-green:hover {
+    background-color: #218838; /* Màu xanh lá cây đậm hơn khi hover */
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+  
 h1,
 h2,
 h3,
@@ -141,7 +159,7 @@ h6 {
 }
 
 #header .logo h1 {
-    font-size: 14px;
+    font-size: 26px;
     padding: 0;
     line-height: 1;
     font-weight: 700;
