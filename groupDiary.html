@@ -444,6 +444,41 @@
       transition: background-color 0.3s ease; /* Smooth transition for hover effect */
     }
 
+    /* Căn chỉnh các ô trong bảng */
+.table {
+  width: 100%;
+  table-layout: fixed; /* Đảm bảo các cột có kích thước cố định */
+}
+
+.table th,
+.table td {
+  text-align: center; /* Căn giữa nội dung */
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  padding: 10px; /* Khoảng cách nội dung với viền */
+  word-wrap: break-word; /* Chia dòng nếu nội dung quá dài */
+}
+
+.table tbody tr {
+  height: 60px; /* Chiều cao cố định cho hàng */
+}
+
+/* Thanh tiến độ */
+.progress {
+  width: 100%; /* Đảm bảo chiều rộng đầy đủ */
+  height: 20px; /* Chiều cao thanh */
+  margin: 0; /* Xóa khoảng cách thừa */
+  background-color: #e9ecef; /* Màu nền thanh trống */
+  border-radius: 5px; /* Bo tròn góc */
+}
+
+.progress-bar {
+  text-align: center; /* Căn chữ vào giữa */
+  line-height: 20px; /* Căn chỉnh chữ theo chiều dọc */
+  font-size: 0.85em; /* Kích thước chữ */
+  transition: width 0.3s; /* Hiệu ứng thay đổi chiều rộng */
+}
+
+
     /* Add some padding for better spacing around the button */
     .cta-container {
         padding: 20px;  /* Example padding */
@@ -522,7 +557,6 @@
             <div id="Week 1" class="tabcontent">
               <div class="container mt-5">
                 <div class="col-md-15">
-
                   <table class="table table-bordered table-striped">
                     <thead class="table-dark">
                       <tr>
@@ -538,47 +572,66 @@
                         <td>01</td>
                         <td>Dương Quốc Toàn</td>
                         <td>23130336</td>
-                        <td>Tạo chức năng Group Diary </td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Tạo chức năng Group Diary</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>02</td>
                         <td>Nguyễn Lê Hoàng Khang</td>
                         <td>22130116</td>
-                        <td>Tạo trang Home, chức năng about </td>
-                        <td class="progress-bar bg-success" style="width: 90%;">90%</td>
+                        <td>Tạo trang Home, chức năng about</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">90%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>03</td>
                         <td>Hà Huy Dũng</td>
                         <td>20130235</td>
-                        <td>Tạo chức năng Technical, contact </td>
-                        <td class="progress-bar bg-warning text-dark" style="width: 60%;">60%</td>
+                        <td>Tạo chức năng Technical, contact</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-warning text-dark" role="progressbar" style="width: 60%;">60%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>04</td>
                         <td>Võ Hoàng Nam</td>
                         <td>19130143</td>
-                        <td>Tạo chức năng Project </td>
-                        <td class="progress-bar bg-primary" style="width: 85%;">85%</td>
+                        <td>Tạo chức năng Project</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">85%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>05</td>
                         <td>Đặng Thị Mỹ Hạnh</td>
                         <td>22130072</td>
-                        <td>Tạo chức năng Style Guide, Result </td>
-                        <td class="progress-bar bg-primary" style="width: 70%;">70%</td>
+                        <td>Tạo chức năng Style Guide, Result</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;">70%</div>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-            <!-------------week 2-------------->
+            
             <div id="Week 2" class="tabcontent">
               <div class="container mt-5">
                 <div class="col-md-15">
-
                   <table class="table table-bordered table-striped">
                     <thead class="table-dark">
                       <tr>
@@ -594,48 +647,66 @@
                         <td>01</td>
                         <td>Dương Quốc Toàn</td>
                         <td>23130336</td>
-                        <td>Tạo home: giới thiệu món ăn, đầu bếp,...  </td>
-                        <td class="progress-bar bg-primary" style="width: 85%;">85%</td>
+                        <td>Tạo home: giới thiệu món ăn, đầu bếp,...</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">85%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>02</td>
                         <td>Nguyễn Lê Hoàng Khang</td>
                         <td>22130116</td>
-                        <td>Tạo blog, menu: xem chi tiết món ăn, thanh toán, món ăn</td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Tạo blog, menu: xem chi tiết món ăn, thanh toán, Thêm vào giỏ Hàng</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>03</td>
                         <td>Hà Huy Dũng</td>
                         <td>20130235</td>
-                        <td>Tạo chức năng login, thông tin khách hàng </td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Tạo chức năng login, thông tin khách hàng</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>04</td>
                         <td>Võ Hoàng Nam</td>
                         <td>19130143</td>
                         <td>Tạo chức năng book a table, search</td>
-                        <td class="progress-bar bg-success" style="width: 90%;">90%</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">90%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>05</td>
                         <td>Đặng Thị Mỹ Hạnh</td>
                         <td>22130072</td>
                         <td>Tạo chức năng contact, đặt hàng online</td>
-                        <td class="progress-bar bg-primary" style="width: 80%;">80%</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;">80%</div>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
-            <!-------------week 3-------------->
+            
             <div id="Week 3" class="tabcontent">
-
               <div class="container mt-5">
                 <div class="col-md-15">
-
                   <table class="table table-bordered table-striped">
                     <thead class="table-dark">
                       <tr>
@@ -651,42 +722,63 @@
                         <td>01</td>
                         <td>Dương Quốc Toàn</td>
                         <td>23130336</td>
-                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>02</td>
                         <td>Nguyễn Lê Hoàng Khang</td>
                         <td>22130116</td>
-                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>03</td>
                         <td>Hà Huy Dũng</td>
                         <td>20130235</td>
-                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>04</td>
                         <td>Võ Hoàng Nam</td>
                         <td>19130143</td>
-                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                       <tr>
                         <td>05</td>
                         <td>Đặng Thị Mỹ Hạnh</td>
                         <td>22130072</td>
-                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
-                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
             </div>
+            
           </div>
       </section>
       <!-- End Group Diary Container -->

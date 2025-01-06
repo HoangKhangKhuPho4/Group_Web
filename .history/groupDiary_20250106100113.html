@@ -435,6 +435,54 @@
     .project-info .btn {
       align-self: flex-start;
     }
+
+    .btn-get-started {
+
+      font-size: 16px; /* Adjust font size as needed */
+      padding: 15px 30px; /* Adjust padding for larger button */
+      border-radius: 10px;  /* Slightly rounded corners */
+      transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    /* Căn chỉnh các ô trong bảng */
+.table {
+  width: 100%;
+  table-layout: fixed; /* Đảm bảo các cột có kích thước cố định */
+}
+
+.table th,
+.table td {
+  text-align: center; /* Căn giữa nội dung */
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  padding: 10px; /* Khoảng cách nội dung với viền */
+  word-wrap: break-word; /* Chia dòng nếu nội dung quá dài */
+}
+
+.table tbody tr {
+  height: 60px; /* Chiều cao cố định cho hàng */
+}
+
+/* Thanh tiến độ */
+.progress {
+  width: 100%; /* Đảm bảo chiều rộng đầy đủ */
+  height: 20px; /* Chiều cao thanh */
+  margin: 0; /* Xóa khoảng cách thừa */
+  background-color: #e9ecef; /* Màu nền thanh trống */
+  border-radius: 5px; /* Bo tròn góc */
+}
+
+.progress-bar {
+  text-align: center; /* Căn chữ vào giữa */
+  line-height: 20px; /* Căn chỉnh chữ theo chiều dọc */
+  font-size: 0.85em; /* Kích thước chữ */
+  transition: width 0.3s; /* Hiệu ứng thay đổi chiều rộng */
+}
+
+
+    /* Add some padding for better spacing around the button */
+    .cta-container {
+        padding: 20px;  /* Example padding */
+    }
   </style>
 </head>
 
@@ -452,11 +500,11 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li>
-              <a class="nav-link scrollto active" href="index.html">Home</a>
+              <a class="nav-link scrollto" href="index.html">Home</a>
             </li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
+            <li><a class="nav-link scrollto" href="about.html">About</a></li>
             <li>
-              <a class="nav-link scrollto" href="groupDiary.html">Group Diary</a>
+              <a class="nav-link scrollto active" href="groupDiary.html">Group Diary</a>
             </li>
             <li>
               <a class="nav-link scrollto" href="technical.html">Technical</a>
@@ -473,8 +521,12 @@
             <li>
               <a class="nav-link scrollto" href="contact.html">Contact</a>
             </li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
+             <!-- Bọc nút trong div với lớp cta-container -->
+             <div class="cta-container">
+              <a href="https://hoangkhangkhupho4.github.io/Project_Web/" target="_blank" class="btn-get-started scrollto" style="background-color: #009970; color: white; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold;">
+                Go To Project
+              </a>
+            </div>
         </nav>
         <!-- .navbar -->
       </div>
@@ -503,144 +555,211 @@
             </div>
             <!-------------week 1-------------->
             <div id="Week 1" class="tabcontent">
-
-              <table class="table">
-                <thead class="thead-dark">
-                  <tr>
-                    <th>STT</th>
-                    <th>Họ và tên</th>
-                    <th>Mssv</th>
-                    <th>Công việc</th>
-                    <th>Tiến độ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
-                    <td>Dương Quốc Toàn</td>
-                    <td>23130336</td>
-                    <td>Tạo chức năng Group Diary </td>
-                  </tr>
-                  <tr>
-                    <td>02</td>
-                    <td>Nguyễn Lê Hoàng Khang</td>
-                    <td>22130116</td>
-                    <td>Tạo trang Home, chức năng about </td>
-                  </tr>
-                  <tr>
-                    <td>03</td>
-                    <td>Hà Huy Dũng</td>
-                    <td>20130235</td>
-                    <td>Tạo chức năng Technical, contact </td>
-                  </tr>
-                  <tr>
-                    <td>04</td>
-                    <td>Võ Hoàng Nam</td>
-                    <td>19130143</td>
-                    <td>Tạo chức năng Project </td>
-                  </tr>
-                  <tr>
-                    <td>05</td>
-                    <td>Đặng Thị Mỹ Hạnh</td>
-                    <td>22130072</td>
-                    <td>Tạo chức năng Style Guide, Result </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="container mt-5">
+                <div class="col-md-15">
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th style="width: 10%;">STT</th>
+                        <th style="width: 25%;">Họ và tên</th>
+                        <th style="width: 15%;">Mssv</th>
+                        <th style="width: 35%;">Công việc</th>
+                        <th style="width: 15%;">Tiến độ</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>01</td>
+                        <td>Dương Quốc Toàn</td>
+                        <td>23130336</td>
+                        <td>Tạo chức năng Group Diary</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>02</td>
+                        <td>Nguyễn Lê Hoàng Khang</td>
+                        <td>22130116</td>
+                        <td>Tạo trang Home, chức năng about</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">90%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03</td>
+                        <td>Hà Huy Dũng</td>
+                        <td>20130235</td>
+                        <td>Tạo chức năng Technical, contact</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-warning text-dark" role="progressbar" style="width: 60%;">60%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>04</td>
+                        <td>Võ Hoàng Nam</td>
+                        <td>19130143</td>
+                        <td>Tạo chức năng Project</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">85%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>05</td>
+                        <td>Đặng Thị Mỹ Hạnh</td>
+                        <td>22130072</td>
+                        <td>Tạo chức năng Style Guide, Result</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;">70%</div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-
-            <!-------------week 2-------------->
+            
             <div id="Week 2" class="tabcontent">
-              <table class="table">
-                <thead class="thead-dark">
-                  <tr>
-                    <th>STT</th>
-                    <th>Họ và tên</th>
-                    <th>Mssv</th>
-                    <th>Công việc</th>
-                    <th>Tiến độ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
-                    <td>Dương Quốc Toàn</td>
-                    <td>23130336</td>
-                    <td>Tạo home:giới thiệu món ăn, đầu bếp,các chương trình khuyến mãi, phản hồi người dùng </td>
-                  </tr>
-                  <tr>
-                    <td>02</td>
-                    <td>Nguyễn Lê Hoàng Khang</td>
-                    <td>22130116</td>
-                    <td>Tạo blog, menu: xem chi tiết món ăn, thanh toán,  món ăn: Hoàng Khang </td>
-                  </tr>
-                  <tr>
-                    <td>03</td>
-                    <td>Hà Huy Dũng</td>
-                    <td>20130235</td>
-                    <td>Tạo chức năng login, thông tin khách hàng </td>
-                  </tr>
-                  <tr>
-                    <td>04</td>
-                    <td>Võ Hoàng Nam</td>
-                    <td>19130143</td>
-                    <td>Tạo chức năng book a table, search</td>
-                  </tr>
-                  <tr>
-                    <td>05</td>
-                    <td>Đặng Thị Mỹ Hạnh</td>
-                    <td>22130072</td>
-                    <td>Tạo chức năng contact, đặt hàng online: map,thông tin shiper, món ăn</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="container mt-5">
+                <div class="col-md-15">
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th style="width: 10%;">STT</th>
+                        <th style="width: 25%;">Họ và tên</th>
+                        <th style="width: 15%;">Mssv</th>
+                        <th style="width: 35%;">Công việc</th>
+                        <th style="width: 15%;">Tiến độ</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>01</td>
+                        <td>Dương Quốc Toàn</td>
+                        <td>23130336</td>
+                        <td>Tạo home: giới thiệu món ăn, đầu bếp,...</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;">85%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>02</td>
+                        <td>Nguyễn Lê Hoàng Khang</td>
+                        <td>22130116</td>
+                        <td>Tạo blog, menu: xem chi tiết món ăn, thanh toán, Thêm vào giỏ Hàng</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>03</td>
+                        <td>Hà Huy Dũng</td>
+                        <td>20130235</td>
+                        <td>Tạo chức năng login, thông tin khách hàng</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%;">100%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>04</td>
+                        <td>Võ Hoàng Nam</td>
+                        <td>19130143</td>
+                        <td>Tạo chức năng book a table, search</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 90%;">90%</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>05</td>
+                        <td>Đặng Thị Mỹ Hạnh</td>
+                        <td>22130072</td>
+                        <td>Tạo chức năng contact, đặt hàng online</td>
+                        <td>
+                          <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;">80%</div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
+            
             <!-------------week 3-------------->
             <div id="Week 3" class="tabcontent">
 
-              <table class="table">
-                <thead class="thead-dark">
-                  <tr>
-                    <th>STT</th>
-                    <th>Họ và tên</th>
-                    <th>Mssv</th>
-                    <th>Công việc</th>
-                    <th>Tiến độ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>01</td>
-                    <td>Dương Quốc Toàn</td>
-                    <td>23130336</td>
-                    <td> </td>
-                  </tr>
-                  <tr>
-                    <td>02</td>
-                    <td>Nguyễn Lê Hoàng Khang</td>
-                    <td>22130116</td>
-                    <td> </td>
-                  </tr>
-                  <tr>
-                    <td>03</td>
-                    <td>Hà Huy Dũng</td>
-                    <td>20130235</td>
-                    <td> </td>
-                  </tr>
-                  <tr>
-                    <td>04</td>
-                    <td>Võ Hoàng Nam</td>
-                    <td>19130143</td>
-                    <td> </td>
-                  </tr>
-                  <tr>
-                    <td>05</td>
-                    <td>Đặng Thị Mỹ Hạnh</td>
-                    <td>22130072</td>
-                    <td> </td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="container mt-5">
+                <div class="col-md-15">
+
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th style="width: 10%;">STT</th>
+                        <th style="width: 25%;">Họ và tên</th>
+                        <th style="width: 15%;">Mssv</th>
+                        <th style="width: 35%;">Công việc</th>
+                        <th style="width: 15%;">Tiến độ</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>01</td>
+                        <td>Dương Quốc Toàn</td>
+                        <td>23130336</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
+                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                      </tr>
+                      <tr>
+                        <td>02</td>
+                        <td>Nguyễn Lê Hoàng Khang</td>
+                        <td>22130116</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
+                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                      </tr>
+                      <tr>
+                        <td>03</td>
+                        <td>Hà Huy Dũng</td>
+                        <td>20130235</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
+                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                      </tr>
+                      <tr>
+                        <td>04</td>
+                        <td>Võ Hoàng Nam</td>
+                        <td>19130143</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
+                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                      </tr>
+                      <tr>
+                        <td>05</td>
+                        <td>Đặng Thị Mỹ Hạnh</td>
+                        <td>22130072</td>
+                        <td>Chỉnh sửa, hoàn thiện các phần còn lại </td>
+                        <td class="progress-bar bg-success" style="width: 100%;">100%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
       </section>
@@ -667,7 +786,7 @@
         <h4>Useful Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="terms.html">Terms of Service</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
