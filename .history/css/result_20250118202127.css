@@ -85,11 +85,8 @@ th, td {
     border: 1px solid #ddd;
 }
 .week-photo {
-    width: 100px;
+    max-width: 150px;
     height: auto;
-    border-radius: 4px;
-    display: block;
-    margin: 0 auto;
 }
 tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
