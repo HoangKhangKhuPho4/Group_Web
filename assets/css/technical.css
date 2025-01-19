@@ -1,0 +1,31 @@
+.btn-get-started {
+    font-size: 16px;
+    /* Adjust font size as needed */
+    padding: 15px 30px;
+    /* Adjust padding for larger button */
+    border-radius: 10px;
+    /* Slightly rounded corners */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+/* Add some padding for better spacing around the button */
+.cta-container {
+    padding: 20px;
+    /* Example padding */
+}
+
+#header {
+    position: fixed;
+    /* Đảm bảo menu cố định */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Đảm bảo menu có độ ưu tiên cao hơn phần nội dung */
+}
+
+.content-wrap {
+    margin-top: 30px;
+    /* Điều chỉnh chiều cao để tránh nội dung bị che khuất bởi menu */
+}
