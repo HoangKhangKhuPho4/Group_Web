@@ -80,7 +80,6 @@
         transition: background-color 0.3s ease; /* Smooth transition for hover effect */
       }
 
-      /* Add some padding for better spacing around the button */
       .cta-container {
         padding: 20px; /* Example padding */
       }
@@ -148,7 +147,6 @@
                 <a class="nav-link scrollto" href="contact.html">Contact</a>
               </li>
             </ul>
-            <!-- Bọc nút trong div với lớp cta-container -->
             <div class="cta-container">
               <a
                 href="https://hoangkhangkhupho4.github.io/Project_Web/"
@@ -244,13 +242,13 @@
                 <table class="table table-striped">
                   <thead>
                     <tr>
-                      <th scope="col fixed-cell">STT</th>
-                      <th scope="col fixed-cell">Chức năng</th>
-                      <th scope="col fixed-cell">Người đề xuất</th>
-                      <th scope="col fixed-cell">Người thiết kế</th>
-                      <th scope="col fixed-cell">Người thực hiện</th>
-                      <th scope="col fixed-cell">Thời gian dự kiến</th>
-                      <th scope="col fixed-cell">Trạng thái</th>
+                      <th scope="col">STT</th>
+                      <th scope="col">Chức năng</th>
+                      <th scope="col">Người đề xuất</th>
+                      <th scope="col">Người thiết kế</th>
+                      <th scope="col">Người thực hiện</th>
+                      <th scope="col">Thời gian dự kiến</th>
+                      <th scope="col">Trạng thái</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -299,7 +297,7 @@
                       <td>Dương Quốc Toàn</td>
                       <td>Dương Quốc Toàn</td>
                       <td>1 tuần</td>
-                      <td>Hoàn thành</td>
+                      <td>Đang thực hiện</td>
                     </tr>
                     <tr>
                       <th scope="row">6</th>
@@ -312,7 +310,7 @@
                     </tr>
                     <tr>
                       <th scope="row">7</th>
-                      <td>Admin</td>
+                      <td>Thông tin khách hàng</td>
                       <td>Cả nhóm</td>
                       <td>Hà Huy Dũng</td>
                       <td>Hà Huy Dũng</td>
@@ -344,7 +342,7 @@
                       <td>Võ Hoàng Nam</td>
                       <td>Võ Hoàng Nam</td>
                       <td>1 tuần</td>
-                      <td>Hoàn Thành</td>
+                      <td>Đang thực hiện</td>
                     </tr>
                     <tr>
                       <th scope="row">11</th>
@@ -382,24 +380,6 @@
                       <td>1 tuần</td>
                       <td>Đang thực hiện</td>
                     </tr>
-                    <tr>
-                      <th scope="row">15</th>
-                      <td>Quản lý nhân viên</td>
-                      <td>Cả nhóm</td>
-                      <td>Hà Huy Dũng</td>
-                      <td>Hà Huy Dũng</td>
-                      <td>1 tuần</td>
-                      <td>Hoàn Thành</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">16</th>
-                      <td>Quản lý món ăn</td>
-                      <td>Cả nhóm</td>
-                      <td>Hà Huy Dũng</td>
-                      <td>Hà Huy Dũng</td>
-                      <td>1 tuần</td>
-                      <td>Hoàn Thành</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
@@ -414,6 +394,7 @@
             aria-labelledby="pills-design-tab"
           >
             <div class="container text-start">
+              <!-- MENU (Design 1) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center"
@@ -434,10 +415,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/Menu.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -445,16 +429,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/design/utdRbnVh3EHkebZjjISq6i/menu.html?node-id=0-1&t=GuwNswv0EzKXdBmt-1"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- BLOG (Design 2) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -475,10 +463,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/blog.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -486,16 +477,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/design/wnHgLDRolMGFac2q9CDgRJ/blog.html?node-id=1-2&t=f0ofSy2ODX1UmVnH-1"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- CHI TIẾT MÓN ĂN (Design 3) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -506,29 +501,43 @@
                   <span class="fs-5 text-white">Chi tiết món ăn</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_3_collapse">
                   <div class="container">
                     <div class="row p-3">
-                      <div class="col-sm-6 mt-2">
+                      <div class="col-sm-6 mt-2 text-center">
                         <img
                           src="./img/project/ChiTietMonAn.jpg"
-                          alt=""
+                          alt="Chi tiết món ăn"
                           class="img-fluid"
                         />
+                        <a
+                          href="./img/project/ChiTietMonAn.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Download <i class="fa-solid fa-download"></i>
+                        </a>
                       </div>
-                      <div class="col-sm-6 mt-2">
+                      <div class="col-sm-6 mt-2 text-center">
                         <img
                           src="./img/project/ChiTietMonAnFigma.png"
-                          alt=""
+                          alt="Chi tiết món ăn Figma"
                           class="img-fluid"
                         />
+                        <a
+                          href="https://www.figma.com/design/NXxPGbH3LB5JmrXwLIz6vq/Chi-ti%E1%BA%BFt-M%C3%B3n-%C4%83n?node-id=1-2&t=LK6myHXiqMazEee9-1"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Figma
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- DỊCH VỤ (Design 4) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -539,29 +548,43 @@
                   <span class="fs-5 text-white">Dịch Vụ</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_4_collapse">
                   <div class="container">
                     <div class="row p-3">
-                      <div class="col-sm-6 mt-2">
+                      <div class="col-sm-6 mt-2 text-center">
                         <img
                           src="./img/project/ServicePaper.jpg"
                           alt=""
                           class="img-fluid"
                         />
+                        <a
+                          href="./img/project/ServicePaper.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Download <i class="fa-solid fa-download"></i>
+                        </a>
                       </div>
-                      <div class="col-sm-6 mt-2">
+                      <div class="col-sm-6 mt-2 text-center">
                         <img
                           src="./img/project/ServiceFigma.png"
                           alt=""
                           class="img-fluid"
                         />
+                        <a
+                          href="https://www.figma.com/design/qYfceA0YN8kelPAIvoUeR6/services.html?node-id=0-1&t=HKFAqX8pNkOKqkFt-1"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Figma
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- THÊM VÀO GIỎ HÀNG (Design 5) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -572,7 +595,6 @@
                   <span class="fs-5 text-white">Thêm Vào giỏ Hàng</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_5_collapse">
                   <div class="container">
                     <div class="row p-3">
@@ -582,10 +604,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/CartPaper.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -593,16 +618,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/design/BKxt49UHOjj0m0Jpa5UFkH/ShoppingCart?node-id=0-1&t=6b8AywyguvlgSWAn-1"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- THANH TOÁN (Design 6) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -613,7 +642,6 @@
                   <span class="fs-5 text-white">Thanh toán</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_6_collapse">
                   <div class="container">
                     <div class="row p-3">
@@ -623,10 +651,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/payment.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -634,16 +665,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/design/zjAjgEYQd3F6AU4MyVO3w6/payment.html?node-id=0-1&t=FCdc2Ag2WZncyHZj-1"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- HOME (Design 7) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -654,7 +689,6 @@
                   <span class="fs-5 text-white">Home</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_7_collapse">
                   <div class="container">
                     <div class="row p-3">
@@ -664,10 +698,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/home.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -675,16 +712,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/file/your-figma-link"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- ĐĂNG KÝ (Design 8) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -695,7 +736,6 @@
                   <span class="fs-5 text-white">Đăng ký</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_8_collapse">
                   <div class="container">
                     <div class="row p-3">
@@ -705,10 +745,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/register.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -716,16 +759,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/file/your-figma-link"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- ĐĂNG NHẬP (Design 9) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -736,7 +783,6 @@
                   <span class="fs-5 text-white">Đăng nhập</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_9_collapse">
                   <div class="container">
                     <div class="row p-3">
@@ -746,10 +792,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/login.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download <i class="fa-solid fa-download"></i>
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -757,16 +806,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/file/your-figma-link"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- QUÊN MẬT KHẨU (Design 10) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -777,20 +830,22 @@
                   <span class="fs-5 text-white">Quên mật khẩu</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_10_collapse">
                   <div class="container">
                     <div class="row p-3">
                       <div class="col-sm-6 mt-2 text-center">
                         <img
-                          src="./img/project/forgotPassword.jpg"
+                          src="./img/project/forgot_password.jpg"
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/forgot_password.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download <i class="fa-solid fa-download"></i>
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -798,16 +853,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/file/your-figma-link"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- THÔNG TIN KHÁCH HÀNG (Design 11) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -815,23 +874,25 @@
                   data-bs-target="#design_11_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Admin</span>
+                  <span class="fs-5 text-white">Thông tin khách hàng</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_11_collapse">
                   <div class="container">
                     <div class="row p-3">
                       <div class="col-sm-6 mt-2 text-center">
                         <img
-                          src="./img/project/dashboard.jpg"
+                          src="./img/project/customer_info.jpg"
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/customer_info.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -839,16 +900,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/file/your-figma-link"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- ĐẶT BÀN (Design 12) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -859,24 +924,42 @@
                   <span class="fs-5 text-white">Đặt bàn (booking)</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_12_collapse">
                   <div class="container">
                     <div class="row p-3">
                       <div class="col-sm-6 mt-2 text-center">
-                        <img src="./img/project/booking.jpg" alt="" class="img-fluid img_requirement" />
-                
-                        <a class="btn bg-green text-white mt-3" href="./img/project/booking.jpg" download="./img/project/booking.jpg">
+                        <img
+                          src="./img/project/booking.jpg"
+                          alt=""
+                          class="img-fluid img_requirement"
+                        />
+                        <a
+                          href="./img/project/booking.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download <i class="fa-solid fa-download"></i>
                         </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
-                        <img src="./img/project/booking_html.jpg" alt="" class="img-fluid img_requirement" />
-                
-                
-                        <a class="btn bg-green text-white mt-3"
-                          href="https://www.figma.com/design/lKEMXctzGwREd9EfGsSWlo/Nam-Vo's-team-library?node-id=3311-267&t=gr1dkjaI2IypS7lR-1">
-                          figma
+                        <img
+                          src="./img/project/booking_html.jpg"
+                          alt=""
+                          class="img-fluid img_requirement"
+                        />
+                        <a
+                          href="./img/project/booking_html.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Download <i class="fa-solid fa-download"></i>
+                        </a>
+                        <a
+                          href="https://www.example.com/booking-html-page"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Go to HTML
                         </a>
                       </div>
                     </div>
@@ -884,6 +967,7 @@
                 </div>
               </div>
 
+              <!-- SEARCH (Design 13) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -894,23 +978,42 @@
                   <span class="fs-5 text-white">Search</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_13_collapse">
                   <div class="container">
                     <div class="row p-3">
                       <div class="col-sm-6 mt-2 text-center">
-                        <img src="./img/project/search.jpg" alt="" class="img-fluid img_requirement" />
-                
-                        <a class="btn bg-green text-white mt-3" href="./img/project/search.jpg" download="./img/project/search.jpg">
+                        <img
+                          src="./img/project/search.jpg"
+                          alt=""
+                          class="img-fluid img_requirement"
+                        />
+                        <a
+                          href="./img/project/search.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download <i class="fa-solid fa-download"></i>
                         </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
-                        <img src="./img/project/search_html.jpg" alt="" class="img-fluid img_requirement" />
-                
-                        <a class="btn bg-green text-white mt-3"
-                          href="https://www.figma.com/design/lKEMXctzGwREd9EfGsSWlo/Nam-Vo's-team-library?node-id=3311-133&t=gr1dkjaI2IypS7lR-1">
-                          figma
+                        <img
+                          src="./img/project/search_html.jpg"
+                          alt=""
+                          class="img-fluid img_requirement"
+                        />
+                        <a
+                          href="./img/project/search_html.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Download <i class="fa-solid fa-download"></i>
+                        </a>
+                        <a
+                          href="https://www.example.com/search-html-page"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Go to HTML
                         </a>
                       </div>
                     </div>
@@ -918,6 +1021,7 @@
                 </div>
               </div>
 
+              <!-- INTRODUCTION (Design 14) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -928,29 +1032,50 @@
                   <span class="fs-5 text-white">Introduction</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_14_collapse">
                   <div class="container">
                     <div class="row p-3">
                       <div class="col-sm-6 mt-2 text-center">
-                        <img src="./img/project/introduction.jpg" alt="" class="img-fluid img_requirement" />
-                
-                        <a class="btn bg-green text-white mt-3" href="./img/project/introduction.jpg" download="./img/project/introduction.jpg">
+                        <img
+                          src="./img/project/introduction.jpg"
+                          alt=""
+                          class="img-fluid img_requirement"
+                        />
+                        <a
+                          href="./img/project/introduction.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download <i class="fa-solid fa-download"></i>
                         </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
-                        <img src="./img/project/introduction_html.jpg" alt="" class="img-fluid img_requirement" />
-                
-                        <a class="btn bg-green text-white mt-3"
-                          href="https://www.figma.com/design/lKEMXctzGwREd9EfGsSWlo/Nam-Vo's-team-library?node-id=0-1&t=gRHTXYximiybkpcW-1">
-                          figma
+                        <img
+                          src="./img/project/introduction_html.jpg"
+                          alt=""
+                          class="img-fluid img_requirement"
+                        />
+                        <a
+                          href="./img/project/introduction_html.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Download <i class="fa-solid fa-download"></i>
+                        </a>
+                        <a
+                          href="https://www.example.com/introduction-html-page"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
+                          Go to HTML
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- CONTACT (Design 15) -->
               <div class="design-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -961,7 +1086,6 @@
                   <span class="fs-5 text-white">Contact</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="design_15_collapse">
                   <div class="container">
                     <div class="row p-3">
@@ -971,10 +1095,13 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="./img/project/ContactPaper.jpg"
+                          download
+                          class="btn bg-green text-white mt-3"
+                        >
                           Download
-                        </button>
+                        </a>
                       </div>
                       <div class="col-sm-6 mt-2 text-center">
                         <img
@@ -982,16 +1109,20 @@
                           alt=""
                           class="img-fluid"
                         />
-
-                        <button class="btn bg-green text-white mt-3">
+                        <a
+                          href="https://www.figma.com/file/your-figma-link"
+                          target="_blank"
+                          class="btn bg-green text-white mt-3"
+                        >
                           Figma
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
+              <!-- Nút Download All -->
               <div class="buttonDownAll" style="text-align: center;">
                 <button class="btn bg-green text-white mt-3" onclick="downloadAllImg()">
                   Download All <i class="fa-solid fa-download"></i>
@@ -999,7 +1130,6 @@
               </div>
             </div>
           </div>
-        
 
           <!--Implement-->
           <div
@@ -1009,6 +1139,8 @@
             aria-labelledby="pills-implement-tab"
           >
             <div class="container text-start">
+
+              <!-- MENU (Implement 1) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center"
@@ -1019,7 +1151,6 @@
                   <span class="fs-5 text-white">Menu</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_1_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
@@ -1040,6 +1171,7 @@
                 </div>
               </div>
 
+              <!-- BLOG (Implement 2) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1050,7 +1182,6 @@
                   <span class="fs-5 text-white">Blog</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_2_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
@@ -1071,6 +1202,7 @@
                 </div>
               </div>
 
+              <!-- CHI TIẾT MÓN ĂN (Implement 3) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1081,25 +1213,27 @@
                   <span class="fs-5 text-white">Chi tiết món ăn</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_3_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
                       <iframe
-                        src="./iframe_test.html"
+                        src="https://hoangkhangkhupho4.github.io/Project_Web/menu.html"
                         title="Implement 3"
                         allowfullscreen=""
                       ></iframe>
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="./iframe_test.html" class="btn bg-green text-white"
+                    <a
+                      href="https://hoangkhangkhupho4.github.io/Project_Web/menu.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- DỊCH VỤ (Implement 4) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1107,28 +1241,30 @@
                   data-bs-target="#implement_4_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Thanh toán</span>
+                  <span class="fs-5 text-white">Dịch Vụ</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_4_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
                       <iframe
-                        src="./iframe_test.html"
+                        src="https://hoangkhangkhupho4.github.io/Project_Web/service.html"
                         title="Implement 4"
                         allowfullscreen=""
                       ></iframe>
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="./iframe_test.html" class="btn bg-green text-white"
+                    <a
+                      href="https://hoangkhangkhupho4.github.io/Project_Web/service.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- MENU 2 (Implement 5) - (Trong code gốc bị lặp label "Menu", nên giữ nguyên) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1136,28 +1272,30 @@
                   data-bs-target="#implement_5_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Home</span>
+                  <span class="fs-5 text-white">Menu</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_5_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
                       <iframe
-                        src="./iframe_test.html"
+                        src="https://hoangkhangkhupho4.github.io/Project_Web/menu.html"
                         title="Implement 5"
                         allowfullscreen=""
                       ></iframe>
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="./iframe_test.html" class="btn bg-green text-white"
+                    <a
+                      href="https://hoangkhangkhupho4.github.io/Project_Web/menu.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- THANH TOÁN (Implement 6) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1165,28 +1303,30 @@
                   data-bs-target="#implement_6_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Đăng ký</span>
+                  <span class="fs-5 text-white">Thanh toán</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_6_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
                       <iframe
-                        src="./iframe_test.html"
+                        src="https://hoangkhangkhupho4.github.io/Project_Web/payment.html"
                         title="Implement 6"
                         allowfullscreen=""
                       ></iframe>
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="./iframe_test.html" class="btn bg-green text-white"
+                    <a
+                      href="https://hoangkhangkhupho4.github.io/Project_Web/payment.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- HOME (Implement 7) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1194,10 +1334,9 @@
                   data-bs-target="#implement_7_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Đăng nhập</span>
+                  <span class="fs-5 text-white">Home</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_7_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
@@ -1209,13 +1348,16 @@
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="./iframe_test.html" class="btn bg-green text-white"
+                    <a
+                      href="./iframe_test.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- ĐĂNG KÝ (Implement 8) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1223,10 +1365,9 @@
                   data-bs-target="#implement_8_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Quên mật khẩu</span>
+                  <span class="fs-5 text-white">Đăng ký</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_8_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
@@ -1238,13 +1379,16 @@
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="./iframe_test.html" class="btn bg-green text-white"
+                    <a
+                      href="./iframe_test.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- ĐĂNG NHẬP (Implement 9) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1252,10 +1396,9 @@
                   data-bs-target="#implement_9_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Thông tin khách hàng</span>
+                  <span class="fs-5 text-white">Đăng nhập</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_9_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
@@ -1267,13 +1410,16 @@
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="./iframe_test.html" class="btn bg-green text-white"
+                    <a
+                      href="./iframe_test.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- QUÊN MẬT KHẨU (Implement 10) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1281,28 +1427,30 @@
                   data-bs-target="#implement_10_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Đặt bàn (booking)</span>
+                  <span class="fs-5 text-white">Quên mật khẩu</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_10_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
                       <iframe
-                        src="https://hoangkhangkhupho4.github.io/Project_Web/booking.html"
+                        src="./iframe_test.html"
                         title="Implement 10"
                         allowfullscreen=""
                       ></iframe>
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="https://hoangkhangkhupho4.github.io/Project_Web/booking.html" class="btn bg-green text-white"
+                    <a
+                      href="./iframe_test.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- THÔNG TIN KHÁCH HÀNG (Implement 11) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1310,28 +1458,30 @@
                   data-bs-target="#implement_11_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Search</span>
+                  <span class="fs-5 text-white">Thông tin khách hàng</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_11_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
                       <iframe
-                        src="https://hoangkhangkhupho4.github.io/Project_Web/search.html"
+                        src="./iframe_test.html"
                         title="Implement 11"
                         allowfullscreen=""
                       ></iframe>
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="https://hoangkhangkhupho4.github.io/Project_Web/search.html" class="btn bg-green text-white"
+                    <a
+                      href="./iframe_test.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
                 </div>
               </div>
 
+              <!-- ĐẶT BÀN (Implement 12) -->
               <div class="implement-detail mb-2">
                 <a
                   class="btn btn-toggle rounded-0 bg-green w-100 caret d-flex justify-content-between align-items-center collapsed"
@@ -1339,22 +1489,23 @@
                   data-bs-target="#implement_12_collapse"
                   aria-expanded="false"
                 >
-                  <span class="fs-5 text-white">Introduction</span>
+                  <span class="fs-5 text-white">Đặt bàn (booking)</span>
                   <i class="fas fa-angle-down rotate-icon text-white"></i>
                 </a>
-
                 <div class="collapse border-green" id="implement_12_collapse">
                   <div class="container">
                     <div class="ratio ratio-16x9">
                       <iframe
-                        src="https://hoangkhangkhupho4.github.io/Project_Web/introduction.html"
+                        src="https://hoangkhangkhupho4.github.io/Project_Web/booking.html"
                         title="Implement 12"
                         allowfullscreen=""
                       ></iframe>
                     </div>
                   </div>
                   <div class="button text-center py-3 border-top">
-                    <a href="https://hoangkhangkhupho4.github.io/Project_Web/introduction.html" class="btn bg-green text-white"
+                    <a
+                      href="https://hoangkhangkhupho4.github.io/Project_Web/booking.html"
+                      class="btn bg-green text-white"
                       >Go to page</a
                     >
                   </div>
@@ -1363,7 +1514,6 @@
 
             </div>
           </div>
-
           <!--end tab-->
         </div>
       </div>
@@ -1372,7 +1522,6 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
-      <!-- ... (giữ nguyên nội dung footer) ... -->
       <div class="footer-container">
         <div class="footer-column">
           <h4>About Us</h4>
@@ -1457,10 +1606,11 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
 
-    <!-- Initialize AOS -->
+    <!-- Initialize AOS & Download Function -->
     <script>
       AOS.init({
         duration: 1000,
@@ -1470,10 +1620,8 @@
       function downloadAllImg() {
         // Lấy tất cả các thẻ <img> trên trang
         const images = document.querySelectorAll('img');
-
         // Lấy URL của tất cả các ảnh
         const imageUrls = Array.from(images).map(img => img.src);
-
         // Hiển thị danh sách URL ảnh trong console
         console.log(imageUrls);
 
@@ -1482,11 +1630,7 @@
           link.href = url;
           link.download = url.split('/').pop();
           document.body.appendChild(link);
-
-          // Tự động kích hoạt tải xuống
           link.click();
-
-          // Xóa liên kết sau khi tải
           document.body.removeChild(link);
         });
       }

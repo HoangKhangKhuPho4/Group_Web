@@ -1,0 +1,92 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+header#header {
+    height: 80px; /* Chiều cao header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Đặt màu nền để header không bị trong suốt */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Tùy chọn: thêm bóng cho header */
+}
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; 
+    position: fixed; /* Đảm bảo header cố định */
+}
+.container-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    margin-top: 50px;
+}
+/* Layout */
+.layout {
+    border: 1px dashed #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.layout img {
+    max-width: 100%;
+    display: block;
+    margin: 10px auto;
+}
+/* Font chữ */
+.fonts .example {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+}
+/* Bảng màu */
+.colors {
+    width: 4400%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+.colors th {
+    
+    background-color: #f5f5f5;
+    color: #0c0c0c;
+}
+.colors th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+.colors td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+Image và kích thước */
+.image-guide {
+    margin-bottom: 20px;
+}
+.image-guide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background: #0057D9;
+    color: white;
+    border-radius: 0 0 8px 8px;
+}

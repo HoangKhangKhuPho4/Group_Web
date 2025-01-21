@@ -1,0 +1,242 @@
+/* styles.css */
+
+/* Reset và thiết lập cơ bản */
+body {
+    font-family: 'Poppins', sans-serif, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header#header {
+    height: 80px; /* Chiều cao header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff; /* Đặt màu nền để header không bị trong suốt */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Thêm bóng cho header */
+}
+
+.container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Chiều cao cố định */
+    position: fixed; /* Đảm bảo header cố định */
+    z-index: 1000; /* Giữ header luôn trên cùng */
+}
+
+/* Nội dung chính */
+.container-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: white;
+    margin-top: 100px; /* Điều chỉnh để tránh chồng lấn với header */
+    border-radius: 8px;
+}
+
+/* Các phần chính về thành viên và dữ liệu tuần */
+.main-content {
+    display: flex;
+    background-color: #a6a3a3;
+    padding: 1rem;
+    margin-bottom: 1rem; /* Khoảng cách giữa các thành viên */
+    border-radius: 8px;
+}
+
+.member-info {
+    flex: 0.5;
+    background: #f4f4f4;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 1rem; /* Khoảng cách giữa thông tin thành viên và dữ liệu */
+}
+
+.member-card {
+    text-align: center;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.weekly-data {
+    flex: 2.5;
+    background: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Bảng dữ liệu */
+.weekly-data table {
+    table-layout: fixed; /* Cố định bố cục bảng */
+    width: 100%; /* Đảm bảo bảng chiếm toàn bộ chiều rộng container */
+    word-wrap: break-word; /* Chia nhỏ từ nếu vượt quá chiều rộng cột */
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.weekly-data thead {
+    background-color: #0057D9;
+    color: rgb(11, 11, 11);
+}
+
+.weekly-data th, .weekly-data td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.weekly-data th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+/* Đặt chiều rộng cho các cột trong bảng có 7 cột */
+.table-fixed-7 th, .table-fixed-7 td {
+    width: 14.28%; /* 100% chia cho 7 cột */
+}
+
+/* Đặt chiều rộng cho các cột trong bảng có 4 cột */
+.table-fixed-4 th, .table-fixed-4 td {
+    width: 25%; /* 100% chia cho 4 cột */
+}
+
+/* Hình ảnh minh họa */
+.week-photo {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hoàn thiện bảng */
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Phản hồi */
+.feedback {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #e9f6ff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.feedback h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #0057D9;
+}
+
+.feedback p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Footer */
+footer#footer {
+    background: #0057D9;
+    color: white;
+    padding: 2rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    margin: 1rem;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    background: #003a99;
+    color: white;
+    padding: 1rem 0;
+}
+
+.footer-bottom .copyright,
+.footer-bottom .credits {
+    text-align: center;
+}
+
+.footer-bottom .credits a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom .social-links {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer-bottom .social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .member-info {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-column {
+        margin: 1rem 0;
+    }
+}
